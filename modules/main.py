@@ -355,11 +355,10 @@ async def txt_handler(bot: Client, m: Message):
 
                 elif any(ext in url for ext in [".jpg", ".jpeg", ".png"]):
                 try:
-                    ext = url.split('.')[-1]
                     cmd = f'yt-dlp -o "{name}.{ext}" "{url}"'
                     download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                     os.system(download_cmd)
-                    cc3 = f'**[🖼️] Image_ID : {str(count).zfill(3)}**\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : {name1}\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : {b_name}\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {CR}**'
+                    cc2 = f'**[🖼️] Image_ID : {str(count).zfill(3)}**\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : {name1}\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : {b_name}\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {CR}**'
                     message = await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc3)
                     os.remove(f'{name}.{ext}')
                 except FloodWait as e:
