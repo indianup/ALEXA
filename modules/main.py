@@ -366,23 +366,7 @@ async def txt_handler(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
 
-                elif any(ext in url for ext in [".mp3", ".wav", ".m4a"]):
-                try:
-                    ext = url.split('.')[-1]
-                    cmd = f'yt-dlp -x --audio-format {ext} -o "{name}.{ext}" "{url}"'
-                    download_cmd = f"{cmd} -R 25 --fragment-retries 25"
-                    os.system(download_cmd)
-                    cc2 = f'**[🎵] Audio_ID : {str(count).zfill(3)}**\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : {name1}\n\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : {b_name}\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {CR}**'
-                    await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc2)
-                    #if accept_logs == 1:  
-                        #file_id = message.document.file_id
-                        #await bot.send_document(chat_id=log_channel_id, document=file_id, caption=cc2)
-                    count += 1
-                    os.remove(f'{name}.{ext}')
-                except FloodWait as e:
-                    await m.reply_text(str(e))
-                    time.sleep(e.x)
-                    continue
+                
             elif any(ext in url for ext in [".jpg", ".jpeg", ".png"]):
                 try:
                     ext = url.split('.')[-1]
