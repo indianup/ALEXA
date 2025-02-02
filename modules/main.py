@@ -289,6 +289,11 @@ async def txt_handler(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1[:60]}'
             
 
+            if 'vurl' in url:
+             vid_id = vurl.split("/")[-2]
+             print(f"vid_id = {vid_id}")
+             url = f"https://madxapi-d0cbf6ac738c.herokuapp.com/{vid_id}/master.m3u8?token={raw_text4}"
+                
             if 'psitoffers.store' in url:
              vid_id = url.split("vid=")[1].split("&")[0]
              print(f"vid_id = {vid_id}")
