@@ -290,7 +290,8 @@ async def txt_handler(bot: Client, m: Message):
             
 
             if 'workers.dev' in url:
-             vid_id = url.split("/")[2]
+             vid_id = url.split("cloudfront.net/")[1].split("/")[0]
+             print(vid_id)
              url = f"https://madxapi-d0cbf6ac738c.herokuapp.com/{vid_id}/master.m3u8?token={raw_text4}"
                 
             if 'psitoffers.store' in url:
