@@ -293,7 +293,10 @@ async def txt_handler(bot: Client, m: Message):
              vid_id = url.split("cloudfront.net/")[1].split("/")[0]
              print(vid_id)
              url = f"https://madxapi-d0cbf6ac738c.herokuapp.com/{vid_id}/master.m3u8?token={raw_text4}"
-                
+
+            if '.ws' in url:
+            url = f"https://master-api-v3.vercel.app/utkash-ws?url={url}&authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzM0MTA1OTA2NCIsInRnX3VzZXJuYW1lIjoiQEFOS0lUX1NIQUtZQTcyIiwiaWF0IjoxNzM4NjkxNzY1fQ.a_Cl0JjGV2RO222gznI10k0xbrM4qU62BQkcaCr-sxY"
+
             if 'psitoffers.store' in url:
              vid_id = url.split("vid=")[1].split("&")[0]
              print(f"vid_id = {vid_id}")
