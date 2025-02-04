@@ -155,9 +155,9 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["ankt","upload"]) )
+@bot.on_message(filters.command(["ankit","upload"]) )
 async def txt_handler(bot: Client, m: Message):
-    editable = await m.reply_text(f"**🔹Hi I am Poweful TXT Downloader📥 Bot.**\n🔹**Send me the TXT file and wait.**")
+    editable = await m.reply_text(f"** 📁 Send me the TXT file and wait.**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -315,8 +315,8 @@ async def txt_handler(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**<pre><code>🎞️ VID_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title: {name1} {res} @Ankit_Shakya73.mkv</code></pre>\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n<pre><code>📥 Extracted By : {CR}**</code></pre>'
-                cc1 = f'**<pre><code>📁 PDF_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title: {name1} @Ankit_Shakya73.pdf</code></pre>\n\n<pre><code>🔖 Batch Name: {b_name}</code></pre>\n\n<pre><code>📥 Extracted By : {CR}**</code></pre>'
+                cc = f'**<pre><code>🎞️ VID_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title:</code></pre>{name1} {res} @Ankit_Shakya73.mkv\n\n<pre><code>🔖 Batch Name:</code></pre> {b_name}</code></pre>\n\n<pre><code>📥 Extracted By :</code></pre> {CR}**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
+                cc1 = f'**<pre><code>📁 PDF_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title:</code></pre> {name1} @Ankit_Shakya73.pdf\n\n<pre><code>🔖 Batch Name</code></pre>: {b_name}</code></pre>\n\n<pre><code>📥 Extracted By :</code></pre>{CR}**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
                     
                 
                 if "drive" in url:
