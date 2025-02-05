@@ -35,58 +35,6 @@ bot = Client(
 
 cookies_file_path = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
 
-def download_ws_file(url, local_filename):
-    """Downloads a .ws file from the given URL and saves it locally."""
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raises an error for HTTP errors (e.g., 404, 500)
-        with open(local_filename, 'wb') as file:
-            file.write(response.content)
-        print(f"Downloaded file: {local_filename}")
-    except requests.exceptions.RequestException as e:
-        print(f"Error downloading file: {e}")
-        return False
-    return True
-
-def ws_to_html(ws_filename, html_filename):
-    """Converts a .ws file to an HTML file."""
-    try:
-        with open(ws_filename, 'r', encoding='utf-8', errors='replace') as ws_file:
-            ws_content = ws_file.read()
-    except UnicodeDecodeError as e:
-        print(f"Error reading {ws_filename}: {e}")
-        return
-    
-    html_content = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WS File Content</title>
-    </head>
-    <body>
-        <h1>Content of {ws_filename}</h1>
-        <pre>{ws_content}</pre>
-    </body>
-    </html>
-    """
-
-    with open(html_filename, 'w', encoding='utf-8') as html_file:
-        html_file.write(html_content)
-
-    print(f"Saved HTML content to {html_filename}")
-    os.remove(ws_filename)  # Remove the .ws file after conversion
-
-def main():
-    """Main function to download, convert, and save the WS file as HTML."""
-    ws_url = '{url}'
-    ws_filename = "file.ws"
-    html_filename = "file.html"
-
-    if download_ws_file(ws_url, ws_filename):
-        ws_to_html(ws_filename, html_filename)
-
 
 # Define aiohttp routes
 routes = web.RouteTableDef()
