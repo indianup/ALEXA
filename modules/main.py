@@ -80,7 +80,7 @@ def ws_to_html(ws_filename, html_filename):
 
 def main():
     """Main function to download, convert, and save the WS file as HTML."""
-    ws_url = "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/notes/22681572268157.ws"
+    ws_url = '{url}'
     ws_filename = "file.ws"
     html_filename = "file.html"
 
