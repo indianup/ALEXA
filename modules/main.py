@@ -290,6 +290,22 @@ async def txt_handler(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1[:60]}'
             
 
+            if '/onlineagriculture' in url:
+                # Splitting the URL
+               parts = url.split("/")
+               # Extracting required components
+               vid_id = parts[-4]  # "788682-1714995256"
+               hls = parts[-3]  # "hls-78632a"
+               quality = parts[-2]  # "360p"
+               master = parts[-1]  # "master-9443895.928218126.m3u8"
+
+              # Printing the results
+               print(f"Vid ID: {vid_id}")
+               print(f"HLS: {hls}")
+               print(f"Quality: {quality}")
+               print(f"Master: {master}")
+               url = f"https://appx-transcoded-videos.akamai.net.in/videos/onlineagriculture-data/{vid_id}/{hls}/{raw_text2}/{master}.m3u8"
+                
             if 'workers.dev' in url:
              vid_id = url.split("cloudfront.net/")[1].split("/")[0]
              print(vid_id)
