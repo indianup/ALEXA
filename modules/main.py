@@ -317,7 +317,7 @@ async def txt_handler(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**<pre><code>🎞️ VID_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title: {name1} {res} @Ankit_Shakya73.mkv</code></pre>\n\n<pre><code>🔖 Batch Name:</code></pre> {b_name}</code></pre>\n\n<pre><code>📥 Extracted By :</code></pre> {CR}**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
+                cc = f'**<pre><code>🎞️ VID_ID: {str(count).zfill(3)}.</code></pre>\n\n<blockquote>📄 Title: {name1} {res} @Ankit_Shakya73.mkv<blockquote>\n\n<pre><code>🔖 Batch Name:</code></pre> {b_name}</code></pre>\n\n<pre><code>📥 Extracted By :</code></pre> {CR}**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
                 cc1 = f'**<pre><code>📁 PDF_ID: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📄 Title: {name1} @Ankit_Shakya73.pdf</code></pre>\n\n<pre><code>🔖 Batch Name</code></pre>: {b_name}</code></pre>\n\n<pre><code>📥 Extracted By :</code></pre>{CR}**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
                     
                 
