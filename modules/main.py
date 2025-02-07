@@ -324,7 +324,7 @@ async def txt_handler(bot: Client, m: Message):
                print(f"HLS: {hls}")
                print(f"Quality: {quality}")
                print(f"Master: {master}")
-               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/{hls}/{raw_text2}p/{master}"
+               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/hls/{raw_text2}p/{master}.m3u8"
                 
             if '/videos/englishjaisir' in url:
                parts = url.split("/")
@@ -339,7 +339,7 @@ async def txt_handler(bot: Client, m: Message):
                print(f"HLS: {hls}")
                print(f"Quality: {quality}")
                print(f"Master: {master}")
-               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/hls/{raw_text2}p/{master}.m3u8"
+               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/{hls}/{raw_text2}p/{master}"
             
             if 'psitoffers.store' in url:
              vid_id = url.split("vid=")[1].split("&")[0]
