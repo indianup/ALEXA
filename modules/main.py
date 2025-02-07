@@ -311,6 +311,35 @@ async def txt_handler(bot: Client, m: Message):
              print(vid_id)
              url = f"https://madxapi-d0cbf6ac738c.herokuapp.com/{vid_id}/master.m3u8?token={raw_text4}"
 
+            if 'livelearn.in' in url:
+               parts = url.split("/")
+               # Extracting required components
+               vid_id = parts[-4]  # "788682-1714995256"
+               hls = parts[-3]  # "hls-78632a"
+               quality = parts[-2]  # "360p"
+               master = parts[-1]  # "master-9443895.928218126.m3u8"
+
+              # Printing the results
+               print(f"Vid ID: {vid_id}")
+               print(f"HLS: {hls}")
+               print(f"Quality: {quality}")
+               print(f"Master: {master}")
+               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/{hls}/{raw_text2}p/{master}"
+                
+            if '/videos/englishjaisir' in url:
+               parts = url.split("/")
+               # Extracting required components
+               vid_id = parts[-4]  # "788682-1714995256"
+               hls = parts[-3]  # "hls-78632a"
+               quality = parts[-2]  # "360p"
+               master = parts[-1]  # "master-9443895.928218126.m3u8"
+
+              # Printing the results
+               print(f"Vid ID: {vid_id}")
+               print(f"HLS: {hls}")
+               print(f"Quality: {quality}")
+               print(f"Master: {master}")
+               url = f"https://appx-transcoded-videos.livelearn.in/videos/englishjaisir-data/{vid_id}/hls/{raw_text2}p/{master}.m3u8"
             
             if 'psitoffers.store' in url:
              vid_id = url.split("vid=")[1].split("&")[0]
