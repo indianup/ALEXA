@@ -282,7 +282,9 @@ async def txt_handler(bot: Client, m: Message):
                     'webengage-luid': '00000187-6fe4-5d41-a530-26186858be4c',
                     'accept-encoding': 'gzip'
              }
-             res = requests.get("https://api.classplusapp.com/cams/uploader/video/jw-signed-url", params=params, headers=headers).json()
+             params = (('url', f'{url}'),)
+             res = requests.get("https://api.classplusapp.com/cams/uploader/video/jw-signed-url", params=params, headers=headers)
+             url = response.json()['url']
              Print(res)
 
 
