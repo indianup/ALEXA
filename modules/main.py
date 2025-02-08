@@ -283,9 +283,9 @@ async def txt_handler(bot: Client, m: Message):
                     'accept-encoding': 'gzip'
              }
              params = (('url', f'{url}'),)
-             res = requests.get("https://api.classplusapp.com/cams/uploader/video/jw-signed-url", params=params, headers=headers)
+             response = requests.get("https://api.classplusapp.com/cams/uploader/video/jw-signed-url", params=params, headers=headers)
              url = response.json()['url']
-             Print(res)
+             Print(response)
 
 
             elif "apps-s3-jw-prod.utkarshapp.com" in url:
