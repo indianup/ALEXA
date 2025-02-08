@@ -285,7 +285,7 @@ async def txt_handler(bot: Client, m: Message):
              params = (('url', f'{url}'),)
              response = requests.get("https://api.classplusapp.com/cams/uploader/video/jw-signed-url", params=params, headers=headers)
              url = response.json()['url']
-             Print(response)
+             
 
 
             elif "apps-s3-jw-prod.utkarshapp.com" in url:
