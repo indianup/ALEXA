@@ -327,7 +327,7 @@ async def txt_handler(bot: Client, m: Message):
                print(f"PART3: {parts3}")
                print(f"PART4: {parts4}")
                print(f"PART5: {parts5}")
-               url = f"{new_url}/{part3}/{part4}/{part5}"
+               url = f"kgs-v4.akamaized.net/kgs-cv/{part3}/{part4}/{part5}"
             if '/onlineagriculture' in url:
                 # Splitting the URL
                parts = url.split("/")
