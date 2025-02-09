@@ -312,10 +312,26 @@ async def txt_handler(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1[:60]}'
             
             if 'khansirvod4.pc.cdn.bitgravity.com' in url:
-                url = "https://khansirvod4.pc.cdn.bitgravity.com"
-                new_url = url.replace("khansirvod4.pc.cdn.bitgravity.com", "kgs-v4.akamaized.net/kgs-cv")
-                print(new_url)
+               url = "https://khansirvod4.pc.cdn.bitgravity.com"
+               new_url = url.replace("kgs-v4.akamaized.net/kgs-cv","khansirvod4.pc.cdn.bitgravity.com")
+               print(new_url)
                 
+               parts = url.split('/')
+
+               part0 = parts[0] 
+               part1 = parts[1]
+               part2 = parts[2]
+               part3 = parts[3] 
+               part4 = parts[4]
+               part5 = parts[5]
+
+               print(f"PART0: {parts0}")
+               print(f"PART1: {parts1}")
+               print(f"PART2: {parts2}")
+               print(f"PART3: {parts3}")
+               print(f"PART4: {parts4}")
+               print(f"PART5: {parts5}")
+               url = f"{new_url}/{part3}/{part4}/{part5}"
             if '/onlineagriculture' in url:
                 # Splitting the URL
                parts = url.split("/")
