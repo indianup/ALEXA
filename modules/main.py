@@ -314,8 +314,7 @@ async def txt_handler(bot: Client, m: Message):
             if 'khansirvod4.pc.cdn.bitgravity.com' in url:
                url = "https://khansirvod4.pc.cdn.bitgravity.com"
                new_url = url.replace("kgs-v4.akamaized.net/kgs-cv","khansirvod4.pc.cdn.bitgravity.com")
-               print(new_url)
-                
+ 
                parts = url.split('/')
 
                part0 = parts[0] 
