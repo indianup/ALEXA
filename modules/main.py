@@ -288,6 +288,7 @@ async def txt_handler(bot: Client, m: Message):
              
 
 
+            
             elif "apps-s3-jw-prod.utkarshapp.com" in url:
                 if 'enc_plain_mp4' in url:
                     url = url.replace(url.split("/")[-1], res+'.mp4')
@@ -310,7 +311,11 @@ async def txt_handler(bot: Client, m: Message):
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
             
-
+            if 'khansirvod4.pc.cdn.bitgravity.com' in url:
+                url = "https://khansirvod4.pc.cdn.bitgravity.com"
+                new_url = url.replace("khansirvod4.pc.cdn.bitgravity.com", "kgs-v4.akamaized.net/kgs-cv")
+                print(new_url)
+                
             if '/onlineagriculture' in url:
                 # Splitting the URL
                parts = url.split("/")
