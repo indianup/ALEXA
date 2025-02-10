@@ -29,3 +29,5 @@ pytube
 opencv-python-headless
 uvloop
 cloudscraper
+gunicorn
+Flask
