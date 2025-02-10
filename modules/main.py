@@ -314,7 +314,7 @@ async def txt_handler(bot: Client, m: Message):
             if '/embed' in url:
                video_id = url.split("/embed/")[1].split("?")[0]
                print(video_id)
-               url = _"https://www.youtube.com/embed/{video_id}"
+               url = f"https://www.youtube.com/embed/{video_id}"
                 
             if 'khansirvod4.pc.cdn.bitgravity.com' in url:               
                parts = url.split('/')               
