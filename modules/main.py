@@ -288,20 +288,17 @@ async def txt_handler(bot: Client, m: Message):
              
 
 
-            
-            elif "apps-s3-jw-prod.utkarshapp.com" in url:
-                if 'enc_plain_mp4' in url:
-                    url = url.replace(url.split("/")[-1], res+'.mp4')
-                    
-                elif 'Key-Pair-Id' in url:
-                    url = None
-                    
-                elif '.m3u8' in url:
-                    q = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).split("/")[0]
-                    x = url.split("/")[5]
-                    x = url.replace(x, "")
-                    url = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).replace(q+"/", x)
+              
 
+
+            elif "apps-s3-jw-prod.utkarshapp.com" in url:
+                  headers = {  
+                          "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36",  
+                          "Accept-Language": "en-US,en;q=0.9",  
+                  }
+                  response = requests.get(url, headers=headers)  
+                  print(response)
+            
             
             
             elif '/master.mpd' in url:
