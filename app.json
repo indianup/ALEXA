@@ -1,43 +1,65 @@
+
 {
-    "name": "𝐓𝐗𝐓 𝐔𝐏𝐋𝐎𝐀𝐃𝐄𝐑",
-    "description": "𝐓𝐗𝐓 𝐔𝐏𝐋𝐎𝐀𝐃𝐄𝐑 𝐁𝐎𝐓 by Ankit Shakya",
-    "logo": "",
-    "keywords": [
-        "text-video",
-        "video-extract",
-        "pyrogram"
-    ],
-    "repository": "https://github.com/AnkitShakya95/ALEXA",
-    "success_url": "https://t.me/Ankit_Shakya72",
-    "stack": "heroku-22",
-    "env": {
-        "API_ID": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑯𝒂𝒔𝒉",
-            "required": true
-        },
-        "BOT_TOKEN": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑩𝒐𝒕 𝑻𝒐𝒌𝒆𝒏",
-            "required": true
-        },
-        "PORT": {
-            "description": "𝘌𝘕𝘛𝘌𝘙 𝘈𝘕𝘠 𝘗𝘖𝘙𝘛 𝘓𝘐𝘒𝘌 8080",
-            "required": true
-        }
-    },
-    "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
+
+    "name": "Unkniwntxt",
+
+    "description": "Download videos from various websites using this telegram bot",
+
+    "repository": "https://github.com/devansh-op/txt-v2",
+    "buildpacks":[
         {
             "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
         },
         {
             "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
         }
+    ],
+    "keywords": [
+
+       
+
+        "telegram bot",
+
+        "pyrogram"
+
+    ],
+
+    "env": {
+
+        "BOT_TOKEN": {
+
+            "description": "Your Bot token from @Botfather"
+
+        },
+
+        "API_ID": {
+
+            "description": "Your API_ID from https://my.telegram.org/apps"
+
+        },
+
+        "API_HASH": {
+
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+
+        }
+
+    },
+
+    "buildpacks": [
+
+        {
+
+            "url": "heroku/python"
+
+        },
+       {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+       }
+       
     ]
+
 }
