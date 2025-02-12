@@ -297,7 +297,7 @@ async def txt_handler(bot: Client, m: Message):
                           "Accept-Language": "en-US,en;q=0.9",  
                   }
                   response = requests.get(url, headers=headers)  
-                  print(response)
+                  print(response.text)
             
             
             
